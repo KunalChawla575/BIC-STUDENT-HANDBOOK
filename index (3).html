@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Innovation Challenge 2.0 — India's Biggest Brain Marathon | LPU</title>
+<meta name="description" content="Bharat Innovation Challenge 2.0 — organised & hosted by Lovely Professional University. Classes 8–12. ₹16L+ in prizes. Grand Finale at LPU Campus, 19–20 November 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16130F;
+    --ink-soft:#5B5750;
+    --line:#EEE7DF;
+    --paper:#FFFFFF;
+    --wash:#FFF7F0;
+    --saffron:#F5A524;
+    --flame:#F2682A;
+    --coral:#F0475B;
+    --grad:linear-gradient(90deg,var(--saffron) 0%,var(--flame) 48%,var(--coral) 100%);
+    --shadow:0 1px 2px rgba(22,19,15,.04),0 12px 32px -18px rgba(22,19,15,.22);
+    --r:16px;
+    --display:"Plus Jakarta Sans",system-ui,sans-serif;
+    --body:"Inter",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{
+    font-family:var(--body);color:var(--ink);background:var(--paper);
+    -webkit-font-smoothing:antialiased;line-height:1.55;
+  }
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* ---------- top ribbon + nav ---------- */
+  .ribbon{height:6px;background:var(--grad)}
+  header{
+    position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;gap:28px;height:66px}
+  .brand{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+  .brand span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav ul{display:flex;gap:22px;list-style:none;margin-left:auto}
+  .nav a{color:var(--ink-soft);text-decoration:none;font-size:14px;font-weight:500}
+  .nav a:hover{color:var(--flame)}
+  .btn{
+    display:inline-block;background:var(--grad);color:#fff;text-decoration:none;
+    font-family:var(--display);font-weight:700;font-size:14px;
+    padding:11px 20px;border-radius:999px;white-space:nowrap;
+    box-shadow:0 8px 20px -8px rgba(242,104,42,.65);transition:transform .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:none;color:var(--flame);border:1.5px solid var(--flame);box-shadow:none}
+  .nav .btn{margin-left:4px}
+  .menu-toggle{display:none;margin-left:auto;background:none;border:0;font-size:24px;cursor:pointer;color:var(--ink)}
+
+  /* ---------- section furniture ---------- */
+  section{padding:86px 0;border-top:1px solid var(--line)}
+  section:first-of-type{border-top:0}
+  .eyebrow{
+    display:inline-block;font-family:var(--display);font-weight:700;font-size:12px;
+    letter-spacing:.06em;color:var(--flame);border:1.5px solid #FBD9BE;
+    padding:6px 16px;border-radius:999px;background:var(--wash);margin-bottom:18px;
+  }
+  h2{font-family:var(--display);font-weight:800;font-size:clamp(28px,4vw,40px);letter-spacing:-.03em;line-height:1.15}
+  h3{font-family:var(--display);font-weight:700;font-size:19px;letter-spacing:-.01em}
+  .lede{color:var(--ink-soft);font-size:17px;max-width:62ch;margin-top:12px}
+  .center{text-align:center}
+  .center .lede{margin-left:auto;margin-right:auto}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:24px;box-shadow:var(--shadow)}
+  .card.tint{background:var(--wash);border-color:#FBE3D2}
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}
+  .g5{grid-template-columns:repeat(5,1fr)}
+  .mt40{margin-top:40px}
+  .mt28{margin-top:28px}
+
+  .chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+  .chip{
+    font-family:var(--display);font-weight:600;font-size:13.5px;color:var(--flame);
+    border:1.5px solid #FBD9BE;background:#fff;border-radius:999px;padding:9px 16px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{padding:74px 0 70px;position:relative;overflow:hidden;text-align:center}
+  .hero:before{
+    content:"";position:absolute;inset:-40% -10% auto -10%;height:520px;
+    background:radial-gradient(ellipse at 50% 0%,rgba(245,165,36,.16),rgba(240,71,91,.06) 45%,transparent 70%);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative}
+  .host{
+    display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;
+    letter-spacing:.08em;color:var(--ink-soft);border:1px solid var(--line);
+    background:#fff;border-radius:999px;padding:8px 18px;box-shadow:var(--shadow);
+  }
+  .host b{color:var(--ink)}
+  .lockup{font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:.92;margin:26px 0 0}
+  .lockup .l1{display:block;font-size:clamp(44px,8vw,86px)}
+  .lockup .l2{display:block;font-size:clamp(44px,8vw,86px)}
+  .lockup .l3{
+    display:block;font-size:clamp(20px,3.2vw,34px);font-weight:700;
+    letter-spacing:.34em;margin-top:6px;color:var(--ink);
+  }
+  .lockup .two{
+    display:inline-block;background:var(--ink);color:#fff;font-size:.42em;
+    padding:4px 10px;border-radius:8px;transform:rotate(-6deg);vertical-align:middle;margin-left:8px;letter-spacing:0;
+  }
+  .tagline{font-family:var(--display);font-weight:700;font-size:clamp(18px,2.6vw,27px);margin-top:20px;letter-spacing:-.02em}
+  .stage-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:36px auto 0}
+  .stage-row .card{padding:16px;text-align:center}
+  .stage-row .t{font-family:var(--display);font-weight:700;color:var(--flame);font-size:15px}
+  .stage-row .d{font-size:14px;color:var(--ink-soft);margin-top:2px}
+  .hero .chips{margin-top:18px;max-width:840px;margin-left:auto;margin-right:auto}
+  .hero-cta{display:flex;gap:12px;justify-content:center;margin-top:34px;flex-wrap:wrap}
+  .skyline{
+    height:96px;margin-top:60px;
+    background:var(--grad);
+    -webkit-mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 100' preserveAspectRatio='none'><path d='M0 100 V78 h40 l10-14 10 14 h30 V58 l24-18 24 18 v42 h36 V66 h18 l14-22 14 22 h18 v34 h40 V54 q30-30 60 0 v46 h34 V72 h50 V52 l26-20 26 20 v20 h44 V44 q34-26 68 0 v56 h40 V70 h22 l12-18 12 18 h22 v30 h44 V56 l30-22 30 22 v44 h38 V74 h56 V54 l28-18 28 18 v20 h30 v26 h40 V62 l26-20 26 20 v38 h34 V80 h60 v20 z' fill='black'/></svg>") no-repeat bottom/100% 100%;
+            mask:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 100' preserveAspectRatio='none'><path d='M0 100 V78 h40 l10-14 10 14 h30 V58 l24-18 24 18 v42 h36 V66 h18 l14-22 14 22 h18 v34 h40 V54 q30-30 60 0 v46 h34 V72 h50 V52 l26-20 26 20 v20 h44 V44 q34-26 68 0 v56 h40 V70 h22 l12-18 12 18 h22 v30 h44 V56 l30-22 30 22 v44 h38 V74 h56 V54 l28-18 28 18 v20 h30 v26 h40 V62 l26-20 26 20 v38 h34 V80 h60 v20 z' fill='black'/></svg>") no-repeat bottom/100% 100%;
+    opacity:.5;
+  }
+
+  /* ---------- stats ---------- */
+  .stat{text-align:center;padding:22px 16px}
+  .stat .n{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.03em;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat .l{font-family:var(--display);font-weight:600;font-size:14px;margin-top:4px;line-height:1.35}
+  .stat.hero-stat{background:var(--wash);border-color:#FBE3D2}
+  .stat.hero-stat .n{font-size:56px}
+
+  /* ---------- pillars ---------- */
+  .pillar{text-align:center;padding:0 8px}
+  .pillar .dot{
+    width:46px;height:46px;margin:0 auto 14px;border-radius:50%;
+    border:1.5px solid #FBD9BE;background:var(--wash);
+    display:grid;place-items:center;font-size:20px;
+  }
+  .pillar p{font-family:var(--display);font-weight:600;font-size:14.5px;line-height:1.4}
+
+  /* ---------- people ---------- */
+  .person{display:flex;flex-direction:column;gap:2px}
+  .person .role{font-family:var(--display);font-weight:700;color:var(--flame);font-size:13px;letter-spacing:.02em}
+  .person .name{font-family:var(--display);font-weight:700;font-size:18px;margin-top:4px}
+  .person .meta{font-size:14px;color:var(--ink-soft)}
+  .juror{padding:16px}
+  .juror .name{font-family:var(--display);font-weight:700;font-size:14.5px;letter-spacing:.01em}
+  .juror .meta{font-size:12.5px;color:var(--ink-soft);line-height:1.35;margin-top:3px}
+  .juror .org{font-weight:600;color:var(--ink)}
+  .quote{font-size:14.5px;color:var(--ink-soft)}
+  .quote .who{display:block;font-family:var(--display);font-weight:700;color:var(--ink);font-size:15px;margin-bottom:2px}
+  .quote .whor{display:block;font-size:12.5px;margin-bottom:10px;color:var(--flame);font-weight:600}
+
+  /* ---------- stages ---------- */
+  .stage-card{padding:28px}
+  .badge{
+    display:inline-block;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.06em;
+    border:1.5px solid var(--line);border-radius:8px;padding:5px 11px;background:#fff;
+  }
+  .stage-card h3{margin:14px 0 8px;font-size:22px}
+  .stage-card ul{list-style:none;margin-top:14px;display:grid;gap:8px}
+  .stage-card li{position:relative;padding-left:20px;font-size:15px;color:var(--ink-soft)}
+  .stage-card li:before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--flame)}
+  .stage-card .chips{justify-content:flex-start;margin-top:20px;padding-top:18px;border-top:1px dashed #F3D6C2}
+  .when{float:right;font-family:var(--display);font-weight:600;font-size:12.5px;color:var(--flame);border:1.5px solid #FBD9BE;border-radius:999px;padding:6px 14px;background:var(--wash)}
+
+  /* ---------- themes ---------- */
+  .theme{padding:20px;display:flex;flex-direction:column;gap:10px;transition:transform .18s ease,border-color .18s ease}
+  .theme:hover{transform:translateY(-3px);border-color:#FBD9BE}
+  .theme .ic{font-size:22px}
+  .theme .tn{font-family:var(--display);font-weight:700;font-size:15px;line-height:1.3}
+
+  /* ---------- timeline ---------- */
+  .timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:36px;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;box-shadow:var(--shadow)}
+  .tl{padding:24px 18px;text-align:center;border-left:1px solid var(--line)}
+  .tl:first-child{border-left:0}
+  .tl .d{font-family:var(--display);font-weight:800;font-size:24px;letter-spacing:-.02em;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tl .e{font-size:13.5px;color:var(--ink-soft);margin-top:4px}
+
+  /* ---------- deck table ---------- */
+  table{width:100%;border-collapse:collapse;font-size:14.5px}
+  thead th{
+    font-family:var(--display);font-weight:700;font-size:13px;text-align:left;
+    background:var(--wash);padding:12px 14px;border-bottom:1px solid var(--line);
+  }
+  td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;color:var(--ink-soft)}
+  td:first-child{width:36px;font-family:var(--display);font-weight:700;color:var(--flame)}
+  td.slide{font-family:var(--display);font-weight:600;color:var(--ink);width:34%}
+  .tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
+
+  /* ---------- prizes ---------- */
+  .podium{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:18px;align-items:end;margin-top:36px}
+  .prize{text-align:center;padding:28px 20px}
+  .prize .tier{font-family:var(--display);font-weight:700;font-size:13px;color:var(--flame);border:1.5px solid #FBD9BE;border-radius:999px;padding:6px 14px;display:inline-block;background:#fff}
+  .prize .amt{font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:-.03em;margin-top:16px}
+  .prize.champ{background:var(--wash);border-color:#FBD9BE;padding:36px 20px}
+  .prize.champ .amt{font-size:52px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .prize .medal{font-size:34px;margin-top:12px}
+  .award{padding:18px;text-align:center;background:var(--wash);border-color:#FBE3D2}
+  .award .a{font-family:var(--display);font-weight:800;font-size:22px;color:var(--flame)}
+  .award .b{font-family:var(--display);font-weight:600;font-size:13.5px;margin-top:2px;line-height:1.3}
+
+  /* ---------- faq ---------- */
+  details{border:1px solid var(--line);border-radius:var(--r);background:#fff;box-shadow:var(--shadow);overflow:hidden}
+  details+details{margin-top:12px}
+  summary{
+    list-style:none;cursor:pointer;padding:18px 52px 18px 20px;position:relative;
+    font-family:var(--display);font-weight:700;font-size:15.5px;line-height:1.4;
+  }
+  summary::-webkit-details-marker{display:none}
+  summary:after{
+    content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);
+    font-size:22px;font-weight:400;color:var(--flame);transition:transform .2s ease;
+  }
+  details[open] summary:after{content:"−"}
+  details p{padding:0 20px 20px;color:var(--ink-soft);font-size:15px}
+
+  /* ---------- terms ---------- */
+  .terms{display:grid;gap:14px;margin-top:28px}
+  .term{display:grid;grid-template-columns:210px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .term:last-child{border-bottom:0}
+  .term dt{font-family:var(--display);font-weight:700;font-size:15px}
+  .term dd{color:var(--ink-soft);font-size:14.5px}
+  .declare{background:var(--wash);border-color:#FBE3D2;font-size:14.5px;color:var(--ink-soft)}
+  .declare b{color:var(--ink)}
+
+  /* ---------- contact ---------- */
+  .contact{padding:24px}
+  .contact .k{font-family:var(--display);font-weight:700;color:var(--flame);font-size:14px}
+  .contact .v{font-family:var(--display);font-weight:700;font-size:18px;margin-top:2px;word-break:break-word}
+  .contact a{color:inherit;text-decoration:none}
+  .contact a:hover{text-decoration:underline}
+
+  footer{background:var(--ink);color:#B9B2A8;padding:44px 0;font-size:14px}
+  footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  footer b{color:#fff;font-family:var(--display)}
+
+  @media (max-width:900px){
+    .g5,.g4{grid-template-columns:repeat(2,1fr)}
+    .g3{grid-template-columns:repeat(2,1fr)}
+    .timeline{grid-template-columns:repeat(2,1fr)}
+    .tl:nth-child(3){border-left:0}
+    .tl:nth-child(n+3){border-top:1px solid var(--line)}
+    .term{grid-template-columns:1fr;gap:4px}
+  }
+  @media (max-width:720px){
+    .nav ul{display:none;position:absolute;top:66px;left:0;right:0;background:#fff;flex-direction:column;
+      gap:0;padding:8px 24px 18px;border-bottom:1px solid var(--line)}
+    .nav ul.open{display:flex}
+    .nav ul li{padding:11px 0;border-bottom:1px solid var(--line)}
+    .menu-toggle{display:block}
+    .nav .btn{display:none}
+    .g2,.g3,.g4,.g5,.stage-row,.podium{grid-template-columns:1fr}
+    section{padding:60px 0}
+    .prize.champ{order:-1}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="ribbon"></div>
+<header>
+  <nav class="wrap nav">
+    <div class="brand">Bharat <span>Innovation</span> Challenge 2.0</div>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#season1">Season 1</a></li>
+      <li><a href="#stages">Stages</a></li>
+      <li><a href="#themes">Themes</a></li>
+      <li><a href="#prizes">Prizes</a></li>
+      <li><a href="#faq">FAQs</a></li>
+    </ul>
+    <a class="btn" href="#register">Register free</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div class="host">ORGANISED &amp; HOSTED BY <b>LOVELY PROFESSIONAL UNIVERSITY</b> · NAAC A++</div>
+
+    <h1 class="lockup">
+      <span class="l1">Bharat</span>
+      <span class="l2 grad-text">innovation</span>
+      <span class="l3">CHALLENGE<span class="two">2.0</span></span>
+    </h1>
+    <p class="tagline"><span class="grad-text">India's Biggest</span> Brain Marathon</p>
+
+    <div class="stage-row">
+      <div class="card">
+        <div class="t">Stage 1 — Online Registrations</div>
+        <div class="d">15 July 2026 – 30 September 2026</div>
+      </div>
+      <div class="card">
+        <div class="t">Stage 2 — Grand Finale at LPU Campus</div>
+        <div class="d">19–20 November 2026</div>
+      </div>
+    </div>
+
+    <div class="chips">
+      <span class="chip">₹16 Lakh+ cash prizes</span>
+      <span class="chip">10 themes &amp; categories</span>
+      <span class="chip">18 winning categories</span>
+      <span class="chip">Grand Finale at LPU Campus</span>
+      <span class="chip">Experience the grand LPU hospitality</span>
+      <span class="chip">Pan-India participation</span>
+      <span class="chip">Chance to get funded</span>
+      <span class="chip">2-stage competition</span>
+      <span class="chip">Internships for winners</span>
+      <span class="chip">Certificates for all</span>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn" href="#register">Register — it's free</a>
+      <a class="btn ghost" href="#stages">See how it works</a>
+    </div>
+  </div>
+  <div class="skyline"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">About BIC 2.0</span>
+    <h2>What is the Bharat Innovation Challenge?</h2>
+    <p class="lede">
+      Not just a competition. A movement, where school students from Class 8 to 12 pick a real
+      problem, build an AI-powered solution and pitch it to India's sharpest industry minds.
+      <b>Organised &amp; hosted by Lovely Professional University.</b>
+    </p>
+
+    <div class="mt40">
+      <span class="eyebrow">LPU's commitment towards Bharat 2047</span>
+      <h2>A national platform, built for Bharat 2047.</h2>
+      <p class="lede">
+        India turns 100 in 2047. The students in school today will be the founders, policymakers,
+        scientists and change-makers of that India. Lovely Professional University is committed to
+        giving them the head start. Not someday — right now.
+      </p>
+    </div>
+
+    <div class="grid g4 mt40">
+      <div class="pillar"><div class="dot">🇮🇳</div><p>Real Indian problems, solved by Indian school students</p></div>
+      <div class="pillar"><div class="dot">🛠️</div><p>A generation trained to prototype, not just present</p></div>
+      <div class="pillar"><div class="dot">🧠</div><p>A major mindset shift from student to innovator</p></div>
+      <div class="pillar"><div class="dot">🌐</div><p>28 states &amp; 500+ cities on one national platform</p></div>
+    </div>
+
+    <div class="grid g2 mt28">
+      <div class="card">
+        <h3>India's youngest founders get their first real stage</h3>
+        <p class="lede">A student entering BIC today could be building India's next unicorn tomorrow. Every great company starts with one idea and one opportunity.</p>
+        <div class="stat" style="text-align:left;padding:18px 0 0"><span class="n">2,600+</span><div class="l">Teams registered from 28 states in Season 1</div></div>
+      </div>
+      <div class="card">
+        <h3>Real capital. Real mentors. In the same room.</h3>
+        <p class="lede">At the Grand Finale, VCs, HNIs and angel investors sit on the jury panel. No other school platform in India offers this access.</p>
+        <div class="stat" style="text-align:left;padding:18px 0 0"><span class="n">8 offers</span><div class="l">Live offers made at the Season 1 Finale</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMITTEE -->
+<section id="committee">
+  <div class="wrap center">
+    <span class="eyebrow">The Organising Committee</span>
+    <h2>The driving force of the Bharat Innovation Challenge</h2>
+    <p class="lede">Steering innovation with vision and purpose.</p>
+
+    <div class="grid g2 mt40" style="text-align:left">
+      <div class="card person">
+        <span class="role">Chief Patron</span>
+        <span class="name">Dr. Ashok Kumar Mittal</span>
+        <span class="meta"><b>Founder Chancellor</b>, Lovely Professional University · Member of Parliament (Rajya Sabha)</span>
+      </div>
+      <div class="card person">
+        <span class="role">Patron</span>
+        <span class="name">Dr. Rashmi Mittal</span>
+        <span class="meta"><b>Pro Chancellor</b>, Lovely Professional University, Punjab, India</span>
+      </div>
+      <div class="card person">
+        <span class="role">Chairperson</span>
+        <span class="name">Dr. Jaspal Singh Sandhu</span>
+        <span class="meta"><b>Vice Chancellor</b>, Lovely Professional University</span>
+      </div>
+      <div class="card person">
+        <span class="role">Co-Chair</span>
+        <span class="name">Dr. Rajeev Sobti</span>
+        <span class="meta"><b>Executive Dean</b>, Lovely Professional University</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEASON 1 -->
+<section id="season1">
+  <div class="wrap center">
+    <span class="eyebrow">Season 1 — Impact &amp; Reach</span>
+    <h2>More than a competition. It's a movement.</h2>
+    <p class="lede">India's young innovators took centre stage.</p>
+
+    <div class="grid g4 mt40">
+      <div class="card stat"><span class="n">35 Lakh+</span><div class="l">Views on Instagram, Facebook &amp; YouTube</div></div>
+      <div class="card stat"><span class="n">4.3 Lakh+</span><div class="l">Impressions on Unstop &amp; other platforms</div></div>
+      <div class="card stat"><span class="n">2 Lakh+</span><div class="l">Students reached via community groups</div></div>
+      <div class="card stat"><span class="n">18,000+</span><div class="l">Schools reached with The Hindu in School</div></div>
+    </div>
+
+    <div class="grid g4 mt28">
+      <div class="card stat hero-stat"><span class="n">8</span><div class="l">Investment offers made by jury members at the Grand Finale</div></div>
+      <div class="card stat"><span class="n">2,650</span><div class="l">Teams registered across India</div></div>
+      <div class="card stat"><span class="n">10,000+</span><div class="l">Students &amp; mentors registered for BIC</div></div>
+      <div class="card stat"><span class="n">500+ Cities</span><div class="l">Participation received from</div></div>
+      <div class="card stat"><span class="n">28 States</span><div class="l">Participation received from</div></div>
+      <div class="card stat"><span class="n">200+</span><div class="l">Attendees at the Grand Finale</div></div>
+      <div class="card stat"><span class="n">60+</span><div class="l">Prototypes showcased</div></div>
+      <div class="card stat"><span class="n">18</span><div class="l">Award categories on the national stage</div></div>
+    </div>
+
+    <div class="mt40">
+      <span class="eyebrow">Season 1 — Partners &amp; media reach</span>
+      <h2>Powered by partnerships. Amplified by media.</h2>
+      <p class="lede">Backed by leading brands. Celebrated across India.</p>
+      <div class="grid g5 mt28">
+        <div class="card center"><div class="stat"><div class="l" style="color:var(--ink-soft);font-size:11px;letter-spacing:.08em">AI PARTNER</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:6px">Quantiphi</div></div></div>
+        <div class="card center"><div class="stat"><div class="l" style="color:var(--ink-soft);font-size:11px;letter-spacing:.08em">MEDIA PARTNER</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:6px">The Hindu</div></div></div>
+        <div class="card center"><div class="stat"><div class="l" style="color:var(--ink-soft);font-size:11px;letter-spacing:.08em">LIFESTYLE PARTNER</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:6px">Scarters</div></div></div>
+        <div class="card center"><div class="stat"><div class="l" style="color:var(--ink-soft);font-size:11px;letter-spacing:.08em">ROBOTICS PARTNER</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:6px">Blix</div></div></div>
+        <div class="card center"><div class="stat"><div class="l" style="color:var(--ink-soft);font-size:11px;letter-spacing:.08em">INNOVATE FORWARD BY</div><div style="font-family:var(--display);font-weight:800;font-size:20px;margin-top:6px">Citizen</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JURY -->
+<section id="jury">
+  <div class="wrap center">
+    <span class="eyebrow">Season 1 — Jury Panel</span>
+    <h2>Meet the jury from BIC Season 1</h2>
+    <p class="lede">Not just judges. Industry game-changers.</p>
+
+    <div class="grid g4 mt40" style="text-align:left">
+      <div class="card juror"><div class="name">Nimisha Pathak</div><div class="meta">People Experience Architect, <span class="org">Samsung</span></div></div>
+      <div class="card juror"><div class="name">Sunanda Rao</div><div class="meta">Regional Mentor of Change – AIM, <span class="org">NITI Aayog</span></div></div>
+      <div class="card juror"><div class="name">Gunjan Mishra</div><div class="meta">AVP, Human Resources, <span class="org">Corro Health</span></div></div>
+      <div class="card juror"><div class="name">Rachhit Nayyar</div><div class="meta">Regional Activation Lead (EMEA), <span class="org">Google Operations Center</span></div></div>
+      <div class="card juror"><div class="name">Pranay Prakash</div><div class="meta">Delivery Head, <span class="org">Darwinbox</span></div></div>
+      <div class="card juror"><div class="name">Atul Tripathy</div><div class="meta">Hon. Adjunct Fellow, <span class="org">The Indian Navy</span></div></div>
+      <div class="card juror"><div class="name">Richa Shailesh</div><div class="meta">Strategic HR Advisor, <span class="org">NextAxis Consulting</span></div></div>
+      <div class="card juror"><div class="name">Arun Kumar</div><div class="meta">Principal Product Lead, <span class="org">Microsoft</span></div></div>
+      <div class="card juror"><div class="name">Binoy Kumar</div><div class="meta">Vice President, South East Asia, <span class="org">Zoho</span></div></div>
+      <div class="card juror"><div class="name">Anshuman Tiwari</div><div class="meta">Global Experience Owner for HR, <span class="org">GSK</span></div></div>
+      <div class="card juror"><div class="name">Sridhar Aranala</div><div class="meta">Chief Sales &amp; Distribution Officer, <span class="org">The Hindu Group</span></div></div>
+      <div class="card juror"><div class="name">Johncy John</div><div class="meta">Marketing Manager, <span class="org">Citizen Watches</span></div></div>
+      <div class="card juror"><div class="name">Jagmohan Singh</div><div class="meta">Retired Executive, <span class="org">Lockheed Martin</span></div></div>
+      <div class="card juror"><div class="name">Abbas Gabagiwala</div><div class="meta">Founder, Blix Education · <span class="org">Shark Tank India Season 3</span></div></div>
+      <div class="card juror"><div class="name">Lakshmi Kanthan D.</div><div class="meta">Deputy General Manager, <span class="org">Citizen Watches</span></div></div>
+      <div class="card juror"><div class="name">Abhinav Rastogi</div><div class="meta">CEO, <span class="org">RMX Group</span></div></div>
+      <div class="card juror"><div class="name">Bharat Bansal</div><div class="meta">CEO &amp; Co-Founder, Nirmalaya · <span class="org">Shark Tank India Season 2</span></div></div>
+      <div class="card juror"><div class="name">Gunjan Saini</div><div class="meta">General Manager, <span class="org">Xebia</span></div></div>
+    </div>
+
+    <h2 class="mt40" style="font-size:24px">What the jury said</h2>
+    <div class="grid g3 mt28" style="text-align:left">
+      <div class="card quote">
+        <span class="who">Mr. Bharat Bansal</span><span class="whor">CEO &amp; Co-Founder, Nirmalaya · Shark Tank India S2</span>
+        What stood out the most was the sheer originality of ideas. These are not just ideas, but thoughtful solutions that reflect real-world understanding and creativity.
+      </div>
+      <div class="card quote">
+        <span class="who">Mr. Anshuman Tiwari</span><span class="whor">Global Experience Owner for HR, GSK</span>
+        Some of the innovations I judged were absolutely amazing. The frugality with which they bring their innovations to the core — India is in good hands.
+      </div>
+      <div class="card quote">
+        <span class="who">Ms. Richa Shailesh</span><span class="whor">Founder, NextAxis Consulting</span>
+        I already have four people I can pick up for internships right away and I'll help them get funding too. Love Lovely Professional University for giving them this platform.
+      </div>
+      <div class="card quote">
+        <span class="who">Mr. Binoy Kumar</span><span class="whor">Vice President, Zoho</span>
+        I'm confident these young innovators will go on to build many successful ventures and contribute more unicorns for India in the future.
+      </div>
+      <div class="card quote">
+        <span class="who">Ms. Sunanda Rao</span><span class="whor">Regional Mentor of Change, AIM, NITI Aayog</span>
+        Initiatives like BIC provide a platform for students to think beyond textbooks and develop solutions that can genuinely contribute to society at large.
+      </div>
+    </div>
+
+    <h2 class="mt40" style="font-size:24px">What the Season 1 finalists said</h2>
+    <div class="grid g3 mt28" style="text-align:left">
+      <div class="card quote">
+        <span class="who">Mr. Shubh</span><span class="whor">Team Sanketra-I · Class 12, Uttarakhand</span>
+        Standing on that stage in front of Shark Tank judges was surreal. The Bharat Innovation Challenge didn't just judge our idea — it made us believe it could actually go somewhere.
+      </div>
+      <div class="card quote">
+        <span class="who">Mr. Arjun Mehta</span><span class="whor">Team Vardaan · Class 11, Uttar Pradesh</span>
+        We built our prototype in three weeks. The feedback from the jury after our pitch was more valuable than the prize money itself.
+      </div>
+      <div class="card quote">
+        <span class="who">Mr. Soorya Kiran</span><span class="whor">Team Mitosis · Class 11, Tamil Nadu</span>
+        Being part of the Bharat Innovation Challenge gave us the opportunity to showcase our idea, but also to see the sheer intensity and scale of the competition.
+      </div>
+      <div class="card quote">
+        <span class="who">Ms. Shivani &amp; Ms. Purnima</span><span class="whor">Faculty Mentors, The Shri Ram Universal School, Jammu</span>
+        From the very beginning, right from the online interactions to the on-ground arrangements, everything has been managed exceptionally well. A truly wonderful experience.
+      </div>
+      <div class="card quote">
+        <span class="who">Mr. Rachhit Nayyar</span><span class="whor">Regional Activation Lead (EMEA), Google Operations Center</span>
+        Seeing our child pitch on a national stage, backed by Lovely Professional University, gave us confidence that this platform genuinely invests in young talent, not just optics.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAGES -->
+<section id="stages">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Season 2 — Overview</span>
+      <h2>Two stages. Even bigger this time.</h2>
+      <p class="lede">From your first idea to standing on the Lovely Professional University stage — here's what the journey looks like.</p>
+    </div>
+
+    <div class="grid g2 mt40">
+      <div class="card stage-card">
+        <span class="badge">STAGE 1</span>
+        <h3>Online submissions</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Submit a PPT or PDF (maximum 15 slides) under one of the 10 themes. Fully online, from anywhere in India. Using AI is rewarded.</p>
+        <div class="chips">
+          <span class="chip">Opens: 15 July 2026</span>
+          <span class="chip">Closes: 30 September 2026</span>
+          <span class="chip">Results: 15 October 2026</span>
+        </div>
+      </div>
+      <div class="card stage-card tint">
+        <span class="badge">STAGE 2</span>
+        <h3>Grand Finale at the LPU Campus</h3>
+        <p style="color:var(--ink-soft);font-size:15px">Top 200 teams. Live pitches. 18 awards. Build it. Pitch it. Win it.</p>
+        <div class="chips">
+          <span class="chip">Finale: 19–20 November 2026</span>
+          <span class="chip">Parallel pitching rounds</span>
+          <span class="chip">Stay, meals, pick &amp; drop provided</span>
+          <span class="chip">₹16L+ worth of prizes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="center mt40" style="margin-top:70px">
+      <span class="eyebrow">Participation guidelines</span>
+      <h2>Who can participate?</h2>
+      <p class="lede">If you've got an idea that can make a difference, you're eligible. No complicated rules. Just pure innovation.</p>
+    </div>
+    <div class="grid g3 mt28">
+      <div class="card stage-card">
+        <h3>Classes 8–12</h3>
+        <ul><li>Ages 13–18 years</li><li>Not open to college students</li></ul>
+      </div>
+      <div class="card stage-card">
+        <h3>Teams of 1–5 students + 1 mentor</h3>
+        <ul><li>Cross-school teams allowed</li><li>Minimum 1 student + 1 mentor</li></ul>
+      </div>
+      <div class="card stage-card">
+        <h3>Zero registration fee</h3>
+        <ul><li>Free to register, free to participate — always</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THEMES -->
+<section id="themes">
+  <div class="wrap center">
+    <span class="eyebrow">Choose one theme</span>
+    <h2>10 themes. One Bharat.</h2>
+    <p class="lede">Pick one challenge, solve a real-world problem and build an innovative solution that creates meaningful impact.</p>
+    <div class="grid g5 mt40" style="text-align:left">
+      <div class="card theme"><span class="ic">💡</span><span class="tn">Smart Living &amp; Urban Intelligence</span></div>
+      <div class="card theme"><span class="ic">🏥</span><span class="tn">Healthcare &amp; HealthTech</span></div>
+      <div class="card theme"><span class="ic">🔐</span><span class="tn">Cybersecurity &amp; Ethical Tech</span></div>
+      <div class="card theme"><span class="ic">🎓</span><span class="tn">Education &amp; EdTech</span></div>
+      <div class="card theme"><span class="ic">🌍</span><span class="tn">Climate &amp; Sustainable Tech</span></div>
+      <div class="card theme"><span class="ic">🚀</span><span class="tn">Aerospace &amp; Frontier Tech</span></div>
+      <div class="card theme"><span class="ic">🌾</span><span class="tn">Agritech &amp; Rural Innovation</span></div>
+      <div class="card theme"><span class="ic">🧠</span><span class="tn">AI &amp; GenAI</span></div>
+      <div class="card theme"><span class="ic">💳</span><span class="tn">FinTech &amp; Financial Inclusion</span></div>
+      <div class="card theme"><span class="ic">🏛️</span><span class="tn">Social Impact, Culture &amp; Heritage</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNEY -->
+<section id="journey">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Stages &amp; timeline</span>
+      <h2>Your journey to the Grand Finale</h2>
+      <p class="lede">From registration to pitching live at LPU. Here's how it works.</p>
+    </div>
+
+    <div class="grid mt40" style="gap:20px">
+      <div class="card stage-card">
+        <span class="when">Online: 15 July – 30 September 2026</span>
+        <span class="badge">STAGE 1</span>
+        <h3>Register and submit your idea</h3>
+        <div class="grid g2" style="gap:0 32px">
+          <ul>
+            <li>Register for free. No entry fee. No hidden costs.</li>
+            <li>Form a team of 1–5 students + 1 mentor.</li>
+            <li>Ages 13–18 only. No college students allowed.</li>
+            <li>Choose 1 of 10 innovation themes.</li>
+          </ul>
+          <ul>
+            <li>Build your solution and submit it as a PPT or PDF.</li>
+            <li>Use AI tools to build smarter solutions.</li>
+            <li>Submit before 30 September 2026 and wait for the shortlist.</li>
+            <li>Focus on prototypes and real solutions.</li>
+          </ul>
+        </div>
+        <div class="chips">
+          <span class="chip">Free registration</span><span class="chip">10 innovation themes</span>
+          <span class="chip">Open to all schools</span><span class="chip">Big ideas start small</span>
+          <span class="chip">Register on the website only</span>
+        </div>
+      </div>
+
+      <div class="card stage-card">
+        <span class="when">Results day: 15 October 2026</span>
+        <span class="badge">STAGE 1</span>
+        <h3>Evaluation &amp; shortlisting</h3>
+        <div class="grid g2" style="gap:0 32px">
+          <ul>
+            <li>Every submission is reviewed by real industry experts.</li>
+            <li>Once selected, book your tickets and get ready for the Finale.</li>
+            <li>The top 200 teams qualify for the Grand Finale at LPU.</li>
+          </ul>
+          <ul>
+            <li>Results are announced on the official website.</li>
+            <li>Shortlisted and waitlisted teams announced.</li>
+            <li>Pre-finale engagement activities with mentors for finalists.</li>
+          </ul>
+        </div>
+        <div class="chips">
+          <span class="chip">Reviewed by industry experts</span><span class="chip">Top 200 teams qualify</span>
+          <span class="chip">Results on the official website</span><span class="chip">Mentor engagement for finalists</span>
+        </div>
+      </div>
+
+      <div class="card stage-card tint">
+        <span class="when">Offline at LPU Campus: 19–20 November 2026</span>
+        <span class="badge">STAGE 2</span>
+        <h3>Grand Finale — the big day</h3>
+        <div class="grid g2" style="gap:0 32px">
+          <ul>
+            <li>Experience India's Biggest Brain Marathon at the LPU Campus.</li>
+            <li>Accommodation, meals and local travel are completely taken care of by LPU, for finalist team members only.</li>
+            <li>Accommodation and food will be provided at the LPU hostel.</li>
+          </ul>
+          <ul>
+            <li>Showcase your working prototype at the BIC Expo.</li>
+            <li>Pitch your idea live before an eminent industry jury.</li>
+            <li>Network with founders, investors and fellow finalists.</li>
+            <li>Compete for ₹16L+ in prizes across 18 award categories.</li>
+          </ul>
+        </div>
+        <div class="chips">
+          <span class="chip">18 winning categories</span><span class="chip">Live jury pitch</span>
+          <span class="chip">Gala dinner for finalists</span><span class="chip">Winning prizes &amp; gifts</span>
+          <span class="chip">Student kit-bags</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="tl"><div class="d">15 July</div><div class="e">Stage 1 opens</div></div>
+      <div class="tl"><div class="d">30 Sept</div><div class="e">Online submission deadline</div></div>
+      <div class="tl"><div class="d">15 Oct</div><div class="e">Round 1 results declared</div></div>
+      <div class="tl"><div class="d">19–20 Nov</div><div class="e">Stage 2 — Finale at LPU Campus</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DECK -->
+<section id="deck">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Stage 1 — Online submissions</span>
+      <h2>Presentation layout</h2>
+      <p class="lede">File type: PDF only. File name: <b>TeamName_ProjectName_SchoolName</b>. Maximum 15 slides.</p>
+    </div>
+
+    <div class="grid g2 mt40" style="gap:20px">
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th></th><th>Slide title</th><th>What to cover</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td class="slide">Cover slide</td><td>Project name, team, category, school, mentor, contact details</td></tr>
+            <tr><td>2</td><td class="slide">Problem statement</td><td>Who is affected? Why does it matter? Use real stats or news</td></tr>
+            <tr><td>3</td><td class="slide">Current gaps</td><td>Why do existing solutions fail? What's missing in the market?</td></tr>
+            <tr><td>4</td><td class="slide">Proposed solution / demo</td><td>Describe your idea clearly. Use a diagram, flowchart or sketch</td></tr>
+            <tr><td>5</td><td class="slide">AI integration</td><td>What AI/ML/NLP tool? How does it work? Why is AI the right choice here?</td></tr>
+            <tr><td>6</td><td class="slide">Target audience</td><td>Who uses it? How often? Where? Size of the population affected</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th></th><th>Slide title</th><th>What to cover</th></tr></thead>
+          <tbody>
+            <tr><td>7</td><td class="slide">Technology stack</td><td>Tools, platforms, datasets, APIs, hardware (simulated or proposed is fine)</td></tr>
+            <tr><td>8</td><td class="slide">Prototype / demo</td><td>Screenshots, wireframes or a working model. Show — don't just tell</td></tr>
+            <tr><td>9</td><td class="slide">Impact &amp; benefits</td><td>Make the impact tangible and measurable</td></tr>
+            <tr><td>10</td><td class="slide">Feasibility &amp; scalability</td><td>How will it work in the real world? What does it cost? How big can it get?</td></tr>
+            <tr><td>11</td><td class="slide">Innovation &amp; uniqueness</td><td>What makes it stand out? Is it novel, or a creative remix?</td></tr>
+            <tr><td>12</td><td class="slide">Team &amp; thank you</td><td>Each member's role, mentor name, school, gratitude, contact details</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="center" style="margin-top:70px">
+      <span class="eyebrow">Stage 2 — Grand Finale at LPU Campus</span>
+      <h2>Everything you need for the Grand Finale</h2>
+    </div>
+    <div class="grid g4 mt28">
+      <div class="card"><h3>Working prototype / demo</h3><p class="lede" style="font-size:15px">An app, AI model, IoT demo or physical model, depending on your idea.</p></div>
+      <div class="card"><h3>Refined pitch deck</h3><p class="lede" style="font-size:15px">Updated Stage 1 deck: problem, solution, AI, user journey, demo, roadmap.</p></div>
+      <div class="card"><h3>Display materials</h3><p class="lede" style="font-size:15px">Poster or standee, laptop or tablet for the live and interactive prototype demo.</p></div>
+      <div class="card"><h3>Live elevator pitch</h3><p class="lede" style="font-size:15px">7 minutes on stage, 2–3 minutes of Q&amp;A with the jury. One turn per team.</p></div>
+    </div>
+
+    <div class="center" style="margin-top:70px">
+      <h2>Pitching round — process overview</h2>
+      <p class="lede">From slot allocation to the awards ceremony, here's what your Grand Finale day looks like.</p>
+    </div>
+    <div class="grid g3 mt28" style="grid-template-columns:repeat(6,1fr)">
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">1</span><div class="l">Slot allocation</div></div></div>
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">2</span><div class="l">Live stage pitch</div></div></div>
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">3</span><div class="l">Jury Q&amp;A round</div></div></div>
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">4</span><div class="l">Expo walkthrough</div></div></div>
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">5</span><div class="l">Jury scoring</div></div></div>
+      <div class="card center"><div class="stat" style="padding:6px"><span class="n" style="font-size:24px">6</span><div class="l">Award ceremony</div></div></div>
+    </div>
+
+    <div class="center" style="margin-top:70px">
+      <h2>Sample pitch structure</h2>
+      <p class="lede">Mandatory points to cover during the 7-minute live pitch at the Grand Finale.</p>
+    </div>
+    <div class="grid g3 mt28">
+      <div class="card"><h3>Problem statement</h3><p class="lede" style="font-size:15px">What challenge are you solving? Why does it matter? Who is affected?</p></div>
+      <div class="card"><h3>Proposed solution</h3><p class="lede" style="font-size:15px">Explain your idea, how it works and what makes it different from other solutions.</p></div>
+      <div class="card"><h3>Tech stack, AI &amp; tools used</h3><p class="lede" style="font-size:15px">Tools, platforms and tech stacks used in your solution, and how it is different.</p></div>
+      <div class="card"><h3>Prototype demo</h3><p class="lede" style="font-size:15px">Display your working prototype, its features and how users interact with it.</p></div>
+      <div class="card"><h3>Audience &amp; impact</h3><p class="lede" style="font-size:15px">Who benefits? What problem does it solve? How can it grow in the future?</p></div>
+      <div class="card"><h3>Future plans &amp; scalability</h3><p class="lede" style="font-size:15px">Share your go-to-market plan, future vision and what comes next for your venture.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTORS -->
+<section id="investors">
+  <div class="wrap center">
+    <span class="eyebrow">Season 2 — Investment ecosystem</span>
+    <h2>The room where young founders meet real capital.</h2>
+    <p class="lede">At BIC, the jury is not just scoring your deck. They are actively scouting for ideas worth backing.</p>
+
+    <div class="grid g4 mt40">
+      <div class="card center"><h3 style="color:var(--flame)">Venture capital funds</h3></div>
+      <div class="card center"><h3 style="color:var(--flame)">Angel investors</h3></div>
+      <div class="card center"><h3 style="color:var(--flame)">High net worth individuals</h3></div>
+      <div class="card center"><h3 style="color:var(--flame)">Industry leaders</h3></div>
+    </div>
+
+    <div class="grid g2 mt28" style="text-align:left">
+      <div class="card tint">
+        <h3 style="color:var(--flame);font-size:15px">Investor interaction process</h3>
+        <div class="stage-card" style="padding:14px 0 0">
+          <ul>
+            <li>They review your 7-minute pitch</li>
+            <li>They visit your Expo booth</li>
+            <li>They sit on the jury panel</li>
+            <li>They make offers on the spot</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card tint">
+        <h3 style="color:var(--flame);font-size:15px">What this means for you</h3>
+        <div class="stage-card" style="padding:14px 0 0">
+          <ul>
+            <li>First-mover advantage — before college, before the competition</li>
+            <li>Your idea gets validated by people who deploy capital</li>
+            <li>Internships and mentorship. A real opportunity</li>
+            <li>A chapter in your story that no one else your age has</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="card tint mt28"><h3 style="font-size:22px">List of investors <span class="grad-text">announcing soon…</span></h3></div>
+    <div class="card tint mt28"><h3 style="font-size:22px">Season 2 jury <span class="grad-text">announcing soon…</span></h3></div>
+  </div>
+</section>
+
+<!-- PRIZES -->
+<section id="prizes">
+  <div class="wrap center">
+    <span class="eyebrow">Prizes &amp; awards</span>
+    <h2>₹16L+ up for grabs</h2>
+    <p class="lede">18 award categories. Every winning rupee goes straight to the student innovators.</p>
+
+    <div class="podium">
+      <div class="card prize">
+        <span class="tier">1st Runner-Up — 2 teams</span>
+        <div class="medal">🥈</div>
+        <div class="amt">₹2,00,000</div>
+      </div>
+      <div class="card prize champ">
+        <span class="tier">Grand Champion Team</span>
+        <div class="medal" style="font-size:44px">🏆</div>
+        <div class="amt">₹3,00,000</div>
+      </div>
+      <div class="card prize">
+        <span class="tier">2nd Runner-Up — 2 teams</span>
+        <div class="medal">🥉</div>
+        <div class="amt">₹1,00,000</div>
+      </div>
+    </div>
+
+    <div class="grid g5 mt28">
+      <div class="card award"><div class="a">₹50,000</div><div class="b">Best AI-powered solution</div></div>
+      <div class="card award"><div class="a">₹50,000</div><div class="b">Best prototype award</div></div>
+      <div class="card award"><div class="a">₹50,000</div><div class="b">Most impactful solution</div></div>
+      <div class="card award"><div class="a">₹50,000 each</div><div class="b">10 theme-wise awards</div></div>
+      <div class="card award"><div class="a">₹15,000 each</div><div class="b">10 jury special awards</div></div>
+    </div>
+
+    <div class="chips mt28">
+      <span class="chip">Scholarship for all finalists</span>
+      <span class="chip">Certificates for all participants</span>
+      <span class="chip">Certificates for all finalists</span>
+      <span class="chip">Get featured in 'The Hindu in School'</span>
+      <span class="chip">Internships for winning teams</span>
+      <span class="chip">Mentorship sessions</span>
+      <span class="chip">Trophies for all winners</span>
+      <span class="chip">Featured on social media</span>
+      <span class="chip">Chance to get funded</span>
+    </div>
+
+    <div style="margin-top:70px">
+      <span class="eyebrow">Season 1 — prizes &amp; giveaways</span>
+      <h2>What did the winning teams get?</h2>
+      <p class="lede">More than a cheque. Every finalist went home with something.</p>
+      <div class="grid g5 mt28">
+        <div class="card center"><h3 style="font-size:15px">Trophies</h3><p class="lede" style="font-size:14px">For all winning categories</p></div>
+        <div class="card center"><h3 style="font-size:15px">Robotics kits by Blix</h3><p class="lede" style="font-size:14px">For all winning teams</p></div>
+        <div class="card center"><h3 style="font-size:15px">Citizen watches</h3><p class="lede" style="font-size:14px">For all winning teams</p></div>
+        <div class="card center"><h3 style="font-size:15px">Scarters prizes</h3><p class="lede" style="font-size:14px">For all winning teams</p></div>
+        <div class="card center"><h3 style="font-size:15px">Certificates</h3><p class="lede" style="font-size:14px">For all participants and finalists</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">FAQs</span>
+      <h2>Frequently asked questions</h2>
+      <p class="lede">Quick answers to the most common questions.</p>
+    </div>
+    <div class="grid g2 mt40" style="align-items:start">
+      <div>
+        <details open>
+          <summary>Is there any registration fee, participation fee or hidden charge at any stage of the competition?</summary>
+          <p>No. The Bharat Innovation Challenge is completely free. There are no registration, participation or hidden charges for students, mentors or schools at any stage of the competition.</p>
+        </details>
+        <details>
+          <summary>Do we need coding knowledge, technical skills or a working prototype to participate in Stage 1?</summary>
+          <p>No. Students from all backgrounds can participate. Stage 1 accepts ideas, wireframes, mockups, sketches and concept presentations. A working prototype is encouraged but not mandatory.</p>
+        </details>
+        <details>
+          <summary>Why should students participate? What makes BIC different from other competitions?</summary>
+          <p>BIC is more than a competition. Students build real solutions, pitch before industry experts, showcase prototypes and compete for ₹16L+ across 18 award categories on a national platform.</p>
+        </details>
+        <details>
+          <summary>Besides prize money, what opportunities can students expect?</summary>
+          <p>Beyond prizes, students gain mentorship, networking, media exposure and internship opportunities. Outstanding teams may also receive direct interest from industry leaders and investors.</p>
+        </details>
+      </div>
+      <div>
+        <details open>
+          <summary>How many students can be in a team, and can students from different schools participate together?</summary>
+          <p>Students of Classes 8–12 (ages 13–18) from any Indian school board can participate. Teams can have 1–5 students and one mentor. Cross-school teams are welcome.</p>
+        </details>
+        <details>
+          <summary>What facilities are provided by LPU, and what should finalists bring?</summary>
+          <p>LPU provides accommodation, meals and local transportation, while finalists must bring their working prototype, refined pitch deck and display materials for the Expo.</p>
+        </details>
+        <details>
+          <summary>Will we receive certificates, awards or recognition for participating?</summary>
+          <p>Yes. Mentors, finalists and winners receive official recognition based on their journey in the competition. Finalists also gain national exposure through the Innovation Expo and Grand Finale.</p>
+        </details>
+        <details>
+          <summary>How are ideas evaluated, who are the jury members and what determines the winners?</summary>
+          <p>Projects are evaluated by founders, investors, corporate leaders and academicians based on innovation, feasibility, impact, presentation quality, execution and future potential.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section id="terms">
+  <div class="wrap">
+    <div class="center">
+      <span class="eyebrow">Terms &amp; conditions</span>
+      <h2>Official declaration, undertaking &amp; terms of participation</h2>
+      <p class="lede">Applies to all students, parents and mentors registering for the Bharat Innovation Challenge 2.0.</p>
+    </div>
+
+    <div class="card declare mt40">
+      By participating in Stage 1 and at the Grand Finale, the team (students, parents, mentors) confirms that they have read, understood and unconditionally agreed to all rules, regulations and terms set forth for the <b>Bharat Innovation Challenge Season 2</b>, organised and hosted by <b>Lovely Professional University, Phagwara, Punjab. This declaration is legally binding.</b> Non-compliance may result in disqualification, withdrawal of privileges or removal from campus.
+    </div>
+
+    <div class="grid g4 mt28">
+      <div class="card"><div class="contact" style="padding:0"><div class="k">Event</div><div class="v" style="font-size:15px">BIC Season 2 — Stage 1 + Grand Finale</div></div></div>
+      <div class="card"><div class="contact" style="padding:0"><div class="k">Dates</div><div class="v" style="font-size:15px">19 &amp; 20 November 2026</div></div></div>
+      <div class="card"><div class="contact" style="padding:0"><div class="k">Venue</div><div class="v" style="font-size:15px">LPU Campus, Phagwara, Punjab, India</div></div></div>
+      <div class="card"><div class="contact" style="padding:0"><div class="k">Contact</div><div class="v" style="font-size:15px">bic@lpu.co.in · +91-8800785157</div></div></div>
+    </div>
+
+    <dl class="terms mt28">
+      <div class="term"><dt>Submission is final</dt><dd>Once submitted, the PPT/PDF cannot be edited, replaced or withdrawn during evaluation. Shortlisted teams must confirm participation; withdrawal after confirmation forfeits the team's slot.</dd></div>
+      <div class="term"><dt>Originality &amp; fair use</dt><dd>Projects, ideas and presentations must be original. Plagiarism, false claims, copied work or AI-generated presentations without genuine innovation will result in immediate and permanent disqualification. The core idea cannot be changed after submission; only refinements are permitted.</dd></div>
+      <div class="term"><dt>Team composition</dt><dd>Each team must consist of 1–5 students and one mentor. Any change in team members or mentor requires prior approval from the Organising Committee. A parent may act as mentor only with official school validation.</dd></div>
+      <div class="term"><dt>Submission format</dt><dd>Only PPT or PDF submissions (maximum 15 slides) following the prescribed file naming convention will be accepted. Non-compliant submissions may be rejected without review.</dd></div>
+      <div class="term"><dt>Confirmation &amp; shortlisting</dt><dd>Selection for the Grand Finale is based on Stage 1 evaluation. Participation is confirmed only after acceptance by the Organising Committee.</dd></div>
+      <div class="term"><dt>Travel</dt><dd>Complimentary pick-up and drop are available only from designated locations (Amritsar Airport, Jalandhar Junction and Phagwara Railway Station). Travel to these pickup points and any additional expenses are the participant's responsibility. No travel reimbursement will be provided.</dd></div>
+      <div class="term"><dt>Accommodation &amp; meals</dt><dd>Complimentary accommodation and meals are provided only for registered students and one mentor per team during the Grand Finale. Separate hostel arrangements for boys and girls are mandatory. Parents and guardians must arrange their own stay, meals and transportation.</dd></div>
+      <div class="term"><dt>Identity verification</dt><dd>A valid school ID and government photo ID (Aadhaar/PAN/Passport) are mandatory throughout the event. Official BIC ID cards must be worn on campus. Entry may be denied without valid identification.</dd></div>
+      <div class="term"><dt>Dress code</dt><dd>School uniform or formal attire is mandatory during all official sessions. Casual wear, ripped jeans, shorts, slippers and flip-flops are not permitted.</dd></div>
+      <div class="term"><dt>Code of conduct</dt><dd>Participants are expected to maintain professional behaviour throughout the competition. Harassment, bullying, discrimination, misconduct or any inappropriate behaviour will lead to immediate disqualification and removal from the event.</dd></div>
+      <div class="term"><dt>Strictly prohibited</dt><dd>Alcohol, tobacco, narcotics, weapons, fireworks, tampering with equipment, recording jury deliberations or attempting any unfair practice is strictly prohibited and may result in legal action, disqualification and forfeiture of prizes.</dd></div>
+      <div class="term"><dt>Jury decisions</dt><dd>All jury decisions are final and binding. No appeals, negotiations or requests for re-evaluation will be entertained. Any attempt to influence the judging process will result in immediate disqualification.</dd></div>
+      <div class="term"><dt>Attendance</dt><dd>Attendance at all official sessions, mentor interactions, exhibition hours, judging rounds and the Award Ceremony is compulsory. Late reporting or absence may affect evaluation or lead to disqualification.</dd></div>
+      <div class="term"><dt>Medical declaration</dt><dd>Participants must disclose any pre-existing medical conditions before arrival. Basic first aid will be available on campus; hospitalisation and related medical expenses remain the participant's responsibility.</dd></div>
+      <div class="term"><dt>Media consent</dt><dd>By participating, teams grant LPU and the Bharat Innovation Challenge permission to use project details, photographs, videos, names and event content for promotional, educational and media purposes without additional consent or compensation. Teams retain ownership of their intellectual property unless otherwise stated.</dd></div>
+      <div class="term"><dt>Liability</dt><dd>Participants attend the event at their own risk. LPU and the Bharat Innovation Challenge shall not be responsible for injuries, travel delays, loss or damage of personal belongings, technical failures, project materials, or cancellations arising from unforeseen circumstances or force majeure.</dd></div>
+      <div class="term"><dt>Prize disbursement</dt><dd>Prize money will be transferred directly to the winner's bank account after successful document verification. Winners must submit valid bank details, PAN and a passbook copy. Applicable TDS and statutory taxes will be deducted as per Government of India regulations. Minor winners or participants without a bank account may receive the prize through a parent or guardian with valid authorisation.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section id="register">
+  <div class="wrap center">
+    <span class="eyebrow">Register now</span>
+    <h2>Ready to build what's next?</h2>
+    <p class="lede">Join thousands of young innovators from across India and turn your idea into impact.</p>
+
+    <div class="grid g2 mt40" style="text-align:left">
+      <div class="card contact"><div class="k">Call us on</div><div class="v">+91-8800785157</div></div>
+      <div class="card contact"><div class="k">Mail us on</div><div class="v"><a href="mailto:bic@lpu.co.in">bic@lpu.co.in</a></div></div>
+      <div class="card contact"><div class="k">DM us on Instagram</div><div class="v">@BharatInnovationChallenge</div></div>
+      <div class="card contact"><div class="k">Visit our website</div><div class="v"><a href="https://www.lpu.in/bharat-innovation-challenge">www.lpu.in/bharat-innovation-challenge</a></div></div>
+    </div>
+
+    <div class="hero-cta">
+      <a class="btn" href="https://www.lpu.in/bharat-innovation-challenge">Register on the official website</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>Bharat Innovation Challenge 2.0</b> — India's Biggest Brain Marathon</div>
+    <div>Organised &amp; hosted by <b>Lovely Professional University</b>, Phagwara, Punjab · bic@lpu.co.in</div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.getElementById('menu');
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { menu.classList.remove('open'); toggle.setAttribute('aria-expanded', false); }
+  });
+</script>
+</body>
+</html>
